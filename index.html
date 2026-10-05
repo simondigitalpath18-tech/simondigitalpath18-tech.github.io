@@ -4,26 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Simon Mwangi | Digital Portfolio</title>
+  <title>Simon Mwangi | Personal Portfolio</title>
 
   <style>
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #f4f7fb;
       color: #222;
       line-height: 1.6;
     }
 
-    header {
-      background: #0b5ed7;
+    /* NAVIGATION */
+    nav {
+      background: #073b8c;
+      padding: 15px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0b5ed7, #073b8c);
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 55px 20px;
     }
 
     .profile-photo {
@@ -33,99 +60,173 @@
       border-radius: 50%;
       border: 5px solid white;
       display: block;
-      margin: 0 auto 20px;
+      margin: 0 auto 22px auto;
     }
 
-    header h1 {
+    .hero h1 {
       margin: 10px 0;
-      font-size: 34px;
+      font-size: 36px;
     }
 
-    header p {
+    .hero p {
       margin: 8px 0;
       font-size: 18px;
     }
 
+    .tagline {
+      font-size: 16px !important;
+      opacity: 0.95;
+    }
+
+    /* MAIN CONTAINER */
     .container {
-      width: 90%;
+      width: 92%;
       max-width: 1000px;
       margin: 0 auto;
     }
 
+    /* SECTIONS */
     section {
       background: white;
-      margin: 25px 0;
+      margin: 28px 0;
       padding: 30px;
-      border-radius: 15px;
+      border-radius: 16px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
 
-    h2 {
+    section h2 {
       color: #0b5ed7;
       margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 26px;
     }
 
-    h3 {
-      margin-bottom: 8px;
+    section h3 {
+      color: #073b8c;
     }
 
+    /* ABOUT */
+    .about-text {
+      font-size: 17px;
+    }
+
+    /* SKILLS */
     .skills {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
     }
 
     .skill {
       background: #eef5ff;
-      padding: 15px;
+      padding: 16px;
       border-radius: 10px;
       font-weight: bold;
+      border-left: 4px solid #0b5ed7;
     }
 
+    /* PROJECTS */
     .project {
+      background: #f8fbff;
+      padding: 18px;
+      margin-bottom: 18px;
       border-left: 5px solid #0b5ed7;
-      padding-left: 15px;
-      margin-bottom: 25px;
+      border-radius: 8px;
     }
 
     .project:last-child {
       margin-bottom: 0;
     }
 
-    a {
+    .project h3 {
+      margin-top: 0;
+    }
+
+    /* GOALS */
+    .goal-list {
+      padding-left: 20px;
+    }
+
+    .goal-list li {
+      margin-bottom: 10px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      text-align: center;
+    }
+
+    .contact-item {
+      margin: 15px 0;
+      font-size: 17px;
+    }
+
+    .contact-item a {
       color: #0b5ed7;
       text-decoration: none;
       font-weight: bold;
     }
 
-    footer {
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* BUTTON */
+    .button {
+      display: inline-block;
       background: #0b5ed7;
       color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background: #073b8c;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #073b8c;
+      color: white;
       text-align: center;
-      padding: 25px 15px;
-      margin-top: 30px;
+      padding: 28px 15px;
+      margin-top: 35px;
     }
 
     footer p {
       margin: 5px;
     }
 
+    /* MOBILE */
     @media (max-width: 600px) {
-      header {
-        padding: 40px 15px;
+
+      nav {
+        padding: 12px 8px;
       }
 
-      header h1 {
-        font-size: 28px;
+      nav a {
+        margin: 0 5px;
+        font-size: 12px;
       }
 
-      header p {
-        font-size: 16px;
+      .hero {
+        padding: 45px 15px;
       }
 
       .profile-photo {
         width: 150px;
         height: 150px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
       }
 
       .container {
@@ -137,6 +238,10 @@
         margin: 20px 0;
       }
 
+      section h2 {
+        font-size: 23px;
+      }
+
       .skills {
         grid-template-columns: 1fr;
       }
@@ -146,8 +251,18 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#goals">Goals</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+
+  <!-- HERO / PROFILE -->
+  <header class="hero">
 
     <img
       src="file_000000000f8c71f8baec7a0f98ea25dd.png"
@@ -161,8 +276,8 @@
       Health Promotion & Sports Science | Digital Skills Enthusiast
     </p>
 
-    <p>
-      Welcome to my personal portfolio.
+    <p class="tagline">
+      Exploring technology, health, sports and digital innovation.
     </p>
 
   </header>
@@ -172,76 +287,62 @@
   <main class="container">
 
 
-    <!-- ABOUT ME -->
-    <section>
+    <!-- ABOUT -->
+    <section id="about">
 
       <h2>About Me</h2>
 
-      <p>
+      <p class="about-text">
         I am Simon Mwangi, a Health Promotion and Sports Science
         student with a strong interest in technology, digital skills,
-        health, sports, and community development.
+        health, sports, physical activity and community development.
       </p>
 
-      <p>
-        I am continuously learning and developing practical skills
-        in website development, digital services, research, and
-        technology.
+      <p class="about-text">
+        I am continuously developing practical digital skills while
+        exploring how technology can be used to create useful solutions
+        in health promotion, education, sports and everyday life.
       </p>
 
     </section>
 
 
     <!-- SKILLS -->
-    <section>
+    <section id="skills">
 
       <h2>My Skills</h2>
 
       <div class="skills">
 
-        <div class="skill">
-          💻 Digital Literacy
-        </div>
+        <div class="skill">💻 Digital Literacy</div>
 
-        <div class="skill">
-          ⌨️ Data Entry
-        </div>
+        <div class="skill">⌨️ Data Entry</div>
 
-        <div class="skill">
-          🌐 Website Development
-        </div>
+        <div class="skill">🌐 Website Development</div>
 
-        <div class="skill">
-          📄 Typing & Document Preparation
-        </div>
+        <div class="skill">📄 Typing & Document Preparation</div>
 
-        <div class="skill">
-          🔎 Research
-        </div>
+        <div class="skill">🔎 Research</div>
 
-        <div class="skill">
-          🎨 Basic Graphic Design
-        </div>
+        <div class="skill">🎨 Basic Graphic Design</div>
 
-        <div class="skill">
-          🎬 Video & PDF Editing
-        </div>
+        <div class="skill">🎬 Video Editing</div>
 
-        <div class="skill">
-          📱 Digital Marketing
-        </div>
+        <div class="skill">📑 PDF Editing</div>
 
-        <div class="skill">
-          ❤️ Health Promotion
-        </div>
+        <div class="skill">📱 Digital Marketing</div>
 
-        <div class="skill">
-          🏃 Sports & Physical Activity
-        </div>
+        <div class="skill">❤️ Health Promotion</div>
 
-        <div class="skill">
-          HTML, CSS & JavaScript
-        </div>
+        <div class="skill">🏃 Sports & Physical Activity</div>
+
+        <div class="skill">HTML</div>
+
+        <div class="skill">CSS</div>
+
+        <div class="skill">JavaScript</div>
+
+        <div class="skill">📊 Basic Digital Research</div>
 
       </div>
 
@@ -249,7 +350,7 @@
 
 
     <!-- PROJECTS -->
-    <section>
+    <section id="projects">
 
       <h2>My Projects</h2>
 
@@ -258,8 +359,8 @@
         <h3>🌐 Personal Portfolio Website</h3>
 
         <p>
-          A personal website showcasing my skills, interests,
-          learning journey, and digital projects.
+          A personal portfolio website designed to showcase my
+          skills, interests, projects and digital learning journey.
         </p>
 
       </div>
@@ -267,12 +368,12 @@
 
       <div class="project">
 
-        <h3>💡 Digital Skills Learning Project</h3>
+        <h3>💻 Digital Skills Learning Project</h3>
 
         <p>
-          A practical learning project focused on websites,
-          applications, databases, APIs, cloud technology,
-          and other digital skills.
+          A practical learning project focused on website development,
+          web applications, APIs, databases, servers, hosting,
+          cloud technology and other digital skills.
         </p>
 
       </div>
@@ -283,9 +384,21 @@
         <h3>❤️ Health Promotion Projects</h3>
 
         <p>
-          Digital and community-based ideas aimed at promoting
-          healthy lifestyles, disease prevention, physical activity,
-          and wellbeing.
+          Digital and community-based ideas focused on healthy
+          lifestyles, disease prevention, physical activity and
+          overall wellbeing.
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <h3>🏐 Sports & Physical Activity</h3>
+
+        <p>
+          Exploring sports, physical activity, fitness and wellness
+          as important components of health promotion.
         </p>
 
       </div>
@@ -300,36 +413,84 @@
 
       <p>
         I am currently studying Health Promotion and Sports Science
-        while also developing practical digital skills.
+        while developing practical digital skills alongside my
+        academic journey.
       </p>
 
       <p>
-        My goal is to combine health promotion, sports, technology,
-        and digital innovation to create useful solutions for
-        individuals and communities.
+        I am learning how websites and web applications work,
+        including HTML, CSS, JavaScript, frontend development,
+        backend concepts, APIs, databases, servers, hosting and
+        cloud technology.
+      </p>
+
+      <p>
+        My goal is to combine health promotion, sports and technology
+        to create useful digital solutions for individuals and
+        communities.
       </p>
 
     </section>
 
 
+    <!-- GOALS -->
+    <section id="goals">
+
+      <h2>My Goals</h2>
+
+      <ul class="goal-list">
+
+        <li>
+          Develop strong digital and technology skills.
+        </li>
+
+        <li>
+          Build useful websites and web applications.
+        </li>
+
+        <li>
+          Combine technology with health promotion and sports.
+        </li>
+
+        <li>
+          Create digital solutions that can benefit communities.
+        </li>
+
+        <li>
+          Continue improving my professional and technical skills.
+        </li>
+
+      </ul>
+
+    </section>
+
+
     <!-- CONTACT -->
-    <section>
+    <section id="contact">
 
-      <h2>Contact Me</h2>
+      <div class="contact-box">
 
-      <p>
-        📞 Phone:
-        <a href="tel:0718417902">
-          0718417902
+        <h2>Contact Me</h2>
+
+        <div class="contact-item">
+          📞 Phone:
+          <a href="tel:0718417902">
+            0718417902
+          </a>
+        </div>
+
+        <div class="contact-item">
+          📧 Email:
+          <a href="mailto:simonmwangikungu22@gmail.com">
+            simonmwangikungu22@gmail.com
+          </a>
+        </div>
+
+        <a class="button" href="mailto:simonmwangikungu22@gmail.com">
+          Contact Me
         </a>
-      </p>
 
-      <p>
-        📧 Email:
-        <a href="mailto:simonmwangikungu22@gmail.com">
-          simonmwangikungu22@gmail.com
-        </a>
-      </p>
+      </div>
 
     </section>
 
@@ -351,4 +512,4 @@
   </footer>
 
 </body>
-</html>
+  </html>
