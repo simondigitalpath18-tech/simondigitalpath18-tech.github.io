@@ -7,509 +7,259 @@
   <title>Simon Mwangi | Digital Portfolio</title>
 
   <style>
-    .profile-photo {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 25px auto;
-}
-
-.hero {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
-
-.hero h1 {
-  text-align: center;
-}
-
-.hero p {
-  text-align: center;
-}
-
-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-      }
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f7fb;
-      color: #1f2937;
+      color: #222;
       line-height: 1.6;
-      transition: 0.4s;
     }
 
-    /* NAVIGATION */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #111827;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
+    header {
+      background: #0b5ed7;
       color: white;
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 15px;
-    }
-
-    nav a:hover {
-      color: #38bdf8;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #111827, #1e3a8a);
-      color: white;
+      padding: 50px 20px;
     }
 
-    .hero-content {
-      max-width: 850px;
-      animation: fadeIn 1.5s ease;
+    .profile-photo {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      display: block;
+      margin: 0 auto 20px;
     }
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+    header h1 {
+      margin: 10px 0;
+      font-size: 34px;
     }
 
-    .hero h2 {
-      font-size: 25px;
-      color: #38bdf8;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
+    header p {
+      margin: 8px 0;
       font-size: 18px;
-      margin-bottom: 30px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      margin: 5px;
-      border-radius: 25px;
-      background: #38bdf8;
-      color: #111827;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-      transition: 0.3s;
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .btn:hover {
-      transform: translateY(-3px) scale(1.03);
-    }
-
-    /* SECTIONS */
     section {
-      padding: 70px 20px;
-      max-width: 1100px;
-      margin: auto;
+      background: white;
+      margin: 25px 0;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
 
-    .section-title {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 40px;
-      color: #111827;
+    h2 {
+      color: #0b5ed7;
+      margin-top: 0;
     }
 
-    /* ABOUT */
-    .about {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      font-size: 18px;
+    h3 {
+      margin-bottom: 8px;
     }
 
-    /* SKILLS */
-    .skills-container {
+    .skills {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      gap: 12px;
     }
 
     .skill {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .skill:hover {
-      transform: translateY(-8px);
-    }
-
-    .skill-icon {
-      font-size: 35px;
-      margin-bottom: 10px;
-    }
-
-    .skill h3 {
-      color: #1e3a8a;
-      margin-bottom: 10px;
-    }
-
-    /* EDUCATION */
-    .education {
-      background: #eaf4ff;
-      border-radius: 15px;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .education h3 {
-      color: #1e3a8a;
-      margin-bottom: 10px;
-    }
-
-    /* PROJECTS */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      background: #eef5ff;
+      padding: 15px;
+      border-radius: 10px;
+      font-weight: bold;
     }
 
     .project {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: 0.3s;
+      border-left: 5px solid #0b5ed7;
+      padding-left: 15px;
+      margin-bottom: 25px;
     }
 
-    .project:hover {
-      transform: translateY(-8px);
+    .project:last-child {
+      margin-bottom: 0;
     }
 
-    .project h3 {
-      color: #1e3a8a;
-      margin-bottom: 10px;
+    a {
+      color: #0b5ed7;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    /* CONTACT */
-    .contact {
-      max-width: 100%;
-      background: #111827;
-      color: white;
-      text-align: center;
-    }
-
-    .contact .section-title {
-      color: white;
-    }
-
-    .contact-info {
-      font-size: 18px;
-      margin: 10px;
-    }
-
-    /* FOOTER */
     footer {
-      background: #030712;
-      color: #aaa;
+      background: #0b5ed7;
+      color: white;
       text-align: center;
-      padding: 25px;
+      padding: 25px 15px;
+      margin-top: 30px;
     }
 
-    /* DARK MODE */
-    body.dark {
-      background: #0f172a;
-      color: #e5e7eb;
+    footer p {
+      margin: 5px;
     }
 
-    body.dark .section-title {
-      color: white;
-    }
-
-    body.dark .skill,
-    body.dark .project {
-      background: #1e293b;
-      color: white;
-    }
-
-    body.dark .education {
-      background: #1e293b;
-    }
-
-    /* ANIMATION */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
+    @media (max-width: 600px) {
+      header {
+        padding: 40px 15px;
       }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* MOBILE */
-    @media (max-width: 700px) {
-
-      nav {
-        flex-direction: column;
-        gap: 10px;
+      header h1 {
+        font-size: 28px;
       }
 
-      nav ul {
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .hero h2 {
-        font-size: 20px;
-      }
-
-      .hero p {
+      header p {
         font-size: 16px;
+      }
+
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+      }
+
+      .container {
+        width: 94%;
+      }
+
+      section {
+        padding: 22px;
+        margin: 20px 0;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 
-
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
+  <!-- HEADER -->
+  <header>
 
-    <div class="logo">
-      Simon Mwangi
-    </div>
+    <img
+      src="file_000000000f8c71f8baec7a0f98ea25dd.png"
+      alt="Simon Mwangi"
+      class="profile-photo"
+    >
 
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <h1>Hi, I'm Simon Mwangi 👋</h1>
 
-  </nav>
+    <p>
+      Health Promotion & Sports Science | Digital Skills Enthusiast
+    </p>
 
-
-  <!-- HERO -->
-  <header class="hero" id="home">
-
-    <div class="hero-content 
-      <img src="file_000000000f8c71f8baec7a0f98ea25dd.png" alt="Simon Mwangi" class="profile-photo">
-      <h1>Hi, I'm Simon Mwangi 👋</h1>
-
-      <h2>
-        Health Promotion • Sports Science • Digital Skills
-      </h2>
-
-      <p>
-        Welcome to my personal digital portfolio.
-        I am passionate about technology, health promotion,
-        sports, learning and creating practical digital solutions.
-      </p>
-
-      <a href="#about" class="btn">
-        Explore My Portfolio
-      </a>
-
-      <button class="btn" onclick="toggleDarkMode()">
-        🌙 Dark Mode
-      </button>
-
-    </div>
+    <p>
+      Welcome to my personal portfolio.
+    </p>
 
   </header>
 
 
-  <!-- ABOUT -->
-  <section id="about">
+  <!-- MAIN CONTENT -->
+  <main class="container">
 
-    <h2 class="section-title">
-      About Me
-    </h2>
 
-    <div class="about">
+    <!-- ABOUT ME -->
+    <section>
 
-      <p>
-        I am Simon Mwangi, a passionate learner interested in
-        technology, digital skills, health promotion and sports science.
-        I enjoy learning new technologies and using them to develop
-        practical solutions.
-      </p>
-
-      <br>
+      <h2>About Me</h2>
 
       <p>
-        My goal is to combine health promotion, sports and technology
-        to create meaningful solutions that can improve people's
-        health and wellbeing.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- SKILLS -->
-  <section id="skills">
-
-    <h2 class="section-title">
-      My Skills
-    </h2>
-
-    <div class="skills-container">
-
-      <div class="skill">
-        <div class="skill-icon">💻</div>
-        <h3>Digital Literacy</h3>
-        <p>Computer and digital technology skills.</p>
-      </div>
-
-      <div class="skill">
-        <div class="skill-icon">⌨️</div>
-        <h3>Data Entry</h3>
-        <p>Accurate data entry and document preparation.</p>
-      </div>
-
-      <div class="skill">
-        <div class="skill-icon">🌐</div>
-        <h3>Web Development</h3>
-        <p>Learning HTML, CSS and JavaScript.</p>
-      </div>
-
-      <div class="skill">
-        <div class="skill-icon">🔍</div>
-        <h3>Research</h3>
-        <p>Information searching, research and documentation.</p>
-      </div>
-
-      <div class="skill">
-        <div class="skill-icon">📄</div>
-        <h3>Document Preparation</h3>
-        <p>Typing, formatting and preparing digital documents.</p>
-      </div>
-
-      <div class="skill">
-        <div class="skill-icon">🎨</div>
-        <h3>Digital Design</h3>
-        <p>Basic graphics and digital content creation.</p>
-      </div>
-
-      <div class="skill">
-        <div class="skill-icon">🎬</div>
-        <h3>Media Editing</h3>
-        <p>Basic video and PDF editing.</p>
-      </div>
-
-      <div class="skill">
-        <div class="skill-icon">📢</div>
-        <h3>Digital Marketing</h3>
-        <p>Digital communication and online promotion.</p>
-      </div>
-
-      <div class="skill">
-        <div class="skill-icon">❤️</div>
-        <h3>Health Promotion</h3>
-        <p>Health education and promotion knowledge.</p>
-      </div>
-
-      <div class="skill">
-        <div class="skill-icon">🏃</div>
-        <h3>Sports Science</h3>
-        <p>Sports, exercise and physical activity.</p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- EDUCATION -->
-  <section id="education">
-
-    <h2 class="section-title">
-      Education
-    </h2>
-
-    <div class="education">
-
-      <h3>
-        Bachelor of Science in Health Promotion and Sports Science
-      </h3>
-
-      <p>
-        Masinde Muliro University of Science and Technology
+        I am Simon Mwangi, a Health Promotion and Sports Science
+        student with a strong interest in technology, digital skills,
+        health, sports, and community development.
       </p>
 
       <p>
-        School of Public Health
+        I am continuously learning and developing practical skills
+        in website development, digital services, research, and
+        technology.
       </p>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- PROJECTS -->
-  <section id="projects">
+    <!-- SKILLS -->
+    <section>
 
-    <h2 class="section-title">
-      My Projects
-    </h2>
+      <h2>My Skills</h2>
 
-    <div class="projects">
+      <div class="skills">
+
+        <div class="skill">
+          💻 Digital Literacy
+        </div>
+
+        <div class="skill">
+          ⌨️ Data Entry
+        </div>
+
+        <div class="skill">
+          🌐 Website Development
+        </div>
+
+        <div class="skill">
+          📄 Typing & Document Preparation
+        </div>
+
+        <div class="skill">
+          🔎 Research
+        </div>
+
+        <div class="skill">
+          🎨 Basic Graphic Design
+        </div>
+
+        <div class="skill">
+          🎬 Video & PDF Editing
+        </div>
+
+        <div class="skill">
+          📱 Digital Marketing
+        </div>
+
+        <div class="skill">
+          ❤️ Health Promotion
+        </div>
+
+        <div class="skill">
+          🏃 Sports & Physical Activity
+        </div>
+
+        <div class="skill">
+          HTML, CSS & JavaScript
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section>
+
+      <h2>My Projects</h2>
 
       <div class="project">
 
-        <h3>🌐 Personal Portfolio</h3>
+        <h3>🌐 Personal Portfolio Website</h3>
 
         <p>
-          A personal website showcasing my skills,
-          education and projects.
+          A personal website showcasing my skills, interests,
+          learning journey, and digital projects.
         </p>
 
       </div>
@@ -517,11 +267,12 @@ section {
 
       <div class="project">
 
-        <h3>💻 Digital Skills Project</h3>
+        <h3>💡 Digital Skills Learning Project</h3>
 
         <p>
-          A learning project focused on websites,
-          applications, APIs, databases and modern technology.
+          A practical learning project focused on websites,
+          applications, databases, APIs, cloud technology,
+          and other digital skills.
         </p>
 
       </div>
@@ -529,42 +280,61 @@ section {
 
       <div class="project">
 
-        <h3>❤️ Health Promotion Project</h3>
+        <h3>❤️ Health Promotion Projects</h3>
 
         <p>
-          Digital health promotion content focused on
-          healthy lifestyles and disease prevention.
+          Digital and community-based ideas aimed at promoting
+          healthy lifestyles, disease prevention, physical activity,
+          and wellbeing.
         </p>
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
+    <!-- LEARNING JOURNEY -->
+    <section>
 
-    <h2 class="section-title">
-      Contact Me
-    </h2>
+      <h2>My Learning Journey</h2>
 
-    <div class="contact-info">
-      📞 0718417902
-    </div>
+      <p>
+        I am currently studying Health Promotion and Sports Science
+        while also developing practical digital skills.
+      </p>
 
-    <div class="contact-info">
-      📧 simonmwangikungu22@gmail.com
-    </div>
+      <p>
+        My goal is to combine health promotion, sports, technology,
+        and digital innovation to create useful solutions for
+        individuals and communities.
+      </p>
 
-    <br>
+    </section>
 
-    <button class="btn" onclick="showMessage()">
-      Say Hello 👋
-    </button>
 
-  </section>
+    <!-- CONTACT -->
+    <section>
+
+      <h2>Contact Me</h2>
+
+      <p>
+        📞 Phone:
+        <a href="tel:0718417902">
+          0718417902
+        </a>
+      </p>
+
+      <p>
+        📧 Email:
+        <a href="mailto:simonmwangikungu22@gmail.com">
+          simonmwangikungu22@gmail.com
+        </a>
+      </p>
+
+    </section>
+
+
+  </main>
 
 
   <!-- FOOTER -->
@@ -575,43 +345,10 @@ section {
     </p>
 
     <p>
-      Built with HTML, CSS & JavaScript 🚀
+      Built with HTML & CSS 💻
     </p>
 
   </footer>
-
-
-  <!-- JAVASCRIPT -->
-  <script>
-
-    // DARK MODE
-    function toggleDarkMode() {
-
-      document.body.classList.toggle("dark");
-
-    }
-
-
-    // CONTACT BUTTON
-    function showMessage() {
-
-      alert(
-        "Thanks for visiting Simon Mwangi's portfolio! 🚀"
-      );
-
-    }
-
-
-    // PAGE LOADED
-    window.addEventListener("load", function() {
-
-      console.log(
-        "Welcome to Simon Mwangi's Portfolio 🚀"
-      );
-
-    });
-
-  </script>
 
 </body>
 </html>
